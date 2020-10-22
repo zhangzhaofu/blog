@@ -7,4 +7,4 @@ categories = ["blog"]
 authors = ["zhangzhaofu"]
 +++
 
-Hugo
+Hugo教程

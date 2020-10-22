@@ -1,6 +1,6 @@
 +++
-title = "About zhangzhaofu"
+title = "关于"
 slug = "about"
 +++
 
-This is my blog web site.
+这是我的个人博客站点

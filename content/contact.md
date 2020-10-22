@@ -1,6 +1,6 @@
 +++
-title = "Contact"
+title = "联系方式"
 slug = "contact"
 +++
 
-WebChat: zzf903424478
+微信: zzf903424478
