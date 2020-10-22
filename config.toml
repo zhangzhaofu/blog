@@ -3,7 +3,7 @@ title = "zhangzhaofu"
 
 theme = "hugo-coder"
 
-languagecode = "zh-cn"
+languagecode = "en"
 defaultcontentlanguage = "zh-cn"
 
 paginate = 20
