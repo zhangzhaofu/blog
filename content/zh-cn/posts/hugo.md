@@ -4,7 +4,6 @@ title = "Hugo教程"
 slug = "hugo" 
 tags = ["hugo", "blog"]
 categories = ["blog"]
-authors = ["zhangzhaofu"]
 +++
 
 ## 安装

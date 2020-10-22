@@ -4,7 +4,6 @@ title = "Hugo"
 slug = "hugo" 
 tags = ["hugo", "blog"]
 categories = ["blog"]
-authors = ["zhangzhaofu"]
 +++
 
 This is hugo post.
