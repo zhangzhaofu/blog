@@ -18,9 +18,9 @@ disqusShortname = "zhangzf"
     author = "Zhaofu Zhang"
     description = "Zhaofu Zhang's personal website"
     keywords = "blog,developer,personal"
-    info = "C/Python coder"
+    #info = "C/Python coder"
     avatarurl = "images/avatar.jpg"
-    footercontent = "#Z#"
+    #footercontent = "#Z#"
 
     dateformat = "January 2, 2006"
 
@@ -112,13 +112,13 @@ disqusShortname = "zhangzf"
             url = "posts/"
 
             [[languages.en.menu.main]]
-            name = "Projects"
+            name = "Study"
             weight = 3
-            url = "projects/"
+            url = "study/"
 
             [[languages.en.menu.main]]
-            name = "Contact me"
-            weight = 5
+            name = "Contact"
+            weight = 4
             url = "contact/"
 
 
@@ -128,10 +128,10 @@ disqusShortname = "zhangzf"
 
         [languages.zh-cn.params]
             author = "张召付"
-            info = "C/Python 程序员"
+            #info = "C/Python 程序员"
             description = "张召付的个人博客"
             keywords = "blog,desenvolvedor,pessoal"
-            footercontent = "#Z#"
+            #footercontent = "#Z#"
 
         [languages.zh-cn.menu]
 
@@ -146,11 +146,11 @@ disqusShortname = "zhangzf"
             url = "posts/"
 
             [[languages.zh-cn.menu.main]]
-            name = "项目"
+            name = "学习"
             weight = 3
-            url = "projects/"
+            url = "study/"
 
             [[languages.zh-cn.menu.main]]
-            name = "联系我"
-            weight = 5
+            name = "联系方式"
+            weight = 4
             url = "contact/"
