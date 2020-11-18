@@ -37,8 +37,16 @@ Linux内核, kernel.org
 - Minix
 - Linux
 
-## Linux内核版本，发行版本
-操作系统(系统调用，shell)
-硬件
+## Linux桌面
+    KDE     1996
+    Gnome   1999
 
-## 目录结构
+```
+echo $DESKTOP_SESSION
+```
+
+## Unix
+1970, Unix诞生
+1971-1972, C语言
+1973,Unix用C语言重写
+
