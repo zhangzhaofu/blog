@@ -1,5 +1,8 @@
 # 桌面软件开发技术
 
+windows
+https://blog.csdn.net/wenzhou1219/article/details/81227476
+
 ## 桌面操作系统
 Windows
     xp, win7, win10
