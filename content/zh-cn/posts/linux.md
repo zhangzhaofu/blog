@@ -6,47 +6,136 @@ tags = ["linux"]
 categories = ["linux"]
 +++
 
-## Linux学习资料
-[Linux典藏大系](https://book.douban.com/series/3472)
-Unix, 1969, AT&T, HP-UX, Solaris; BSD, FreeBSD, OpenBSD, 
-1991年，芬兰，Linus Torvalds
-GNU, Richard Stallman
+## Linux From Scratch
 
-Linux内核, kernel.org
+使用磁盘分区程序(cfdisk或fdisk), 创建新分区
 
-- 桌面
-    - Windows
-    - macOS
-    - Linux
-服务器
-    Unix/Linux
-    Windows Server
-移动
-    Android
-    iOS
-嵌入式
-    Linux
+如果 启动磁盘 采用 GUID 分区表 (GPT)，那么必须创建一个小的，一般占据 1MB 的分区
+这个分区在 fdisk 下显示为 'BIOS Boot' 分区
 
-## 虚拟机
+现在我们建立好了空白分区，可以在分区上建立文件系统。LFS 可以使用 Linux 内核能够识别的任何文件系统，最常见的是 ext3 和 ext4
 
-## 操作系统发展
-- Unux
-- C
-- GNU
-- POSIX
-- Minix
-- Linux
-
-## Linux桌面
-    KDE     1996
-    Gnome   1999
-
+LFS 假设根文件系统 (/) 采用 ext4 文件系统。输入以下命令在 LFS 分区创建一个 ext4 文件系统：
 ```
-echo $DESKTOP_SESSION
+mkfs -v -t ext4 /dev/<xxx>
 ```
 
-## Unix
-1970, Unix诞生
-1971-1972, C语言
-1973,Unix用C语言重写
+如果您拥有一个现成的 swap分区，就不需要格式化它。如果新创建了一个 swap分区，需要执行以下命令以初始化它：
+```
+mkswap /dev/<yyy>
+```
 
+我们已经在分区上建立了文件系统，为了访问分区，我们需要把分区挂载到选定的挂载点上
+```
+mount -v -t ext4 /dev/<xxx> $LFS
+```
+上面的命令假设您在构建 LFS 的过程中不会重启计算机。如果您关闭了系统，那么您要么在继续构建过程时重新挂载分区，要么修改宿主系统的 /etc/fstab 文件，使得系统在引导时自动挂载它们。例如：
+```
+/dev/<xxx>  /mnt/lfs ext4   defaults      1     1
+```
+如果您使用了 swap 分区，使用 swapon 命令启用它：
+```
+/sbin/swapon -v /dev/<zzz>
+```
+
+下面为该目录添加写入权限和 sticky 标志。“Sticky” 标志使得即使有多个用户对该目录有写入权限，也只有文件所有者能够删除其中的文件。输入以下命令，启用写入权限和 sticky 标志：
+```
+chmod -v a+wt $LFS/sources
+```
+
+wget获取wget-list里的软件包
+```
+wget --input-file=wget-list --continue --directory-prefix=$LFS/sources
+```
+
+用到的软件:
+Binutils 包含汇编器、链接器以及其他用于处理目标文件的工具。
+GCC 软件包包含 GNU 编译器集合，其中有 C 和 C++ 编译器。
+Linux API 头文件 (在 linux-5.8.3.tar.xz 中) 导出内核 API 供 Glibc 使用。
+Glibc 软件包包含主要的 C 语言库。它提供用于分配内存、检索目录、打开和关闭文件、读写文件、字符串处理、模式匹配、算术等用途的基本子程序
+Libstdc++ 是 C++ 标准库。我们需要它才能编译 C++ 代码 (GCC 的一部分用 C++ 编写)。但在构建第一遍的 GCC时我们不得不暂缓安装它，因为它依赖于当时还没有安装到目标目录的 Glibc
+M4 软件包包含一个宏处理器。
+Ncurses 软件包包含终端无关的字符屏幕处理库。
+Bash 软件包包含 Bourne-Again SHell。
+Coreutils 软件包包含用于显示和设定系统基本属性的工具。
+Diffutils 软件包包含显示文件或目录之间差异的程序。
+File 软件包包含用于确定给定文件类型的工具。
+Findutils 软件包包含用于查找文件的程序。这些程序能够递归地搜索目录树，以及创建、维护和搜索文件数据库 (一般比递归搜索快，但在数据库最近没有更新时不可靠)。
+Gawk 软件包包含操作文本文件的程序。
+Grep 软件包包含在文件内容中进行搜索的程序。
+Gzip 软件包包含压缩和解压缩文件的程序。
+Make 软件包包含一个程序，用于控制从软件包源代码生成可执行文件和其他非源代码文件的过程。
+Patch 软件包包含通过应用 “补丁” 文件，修改或创建文件的程序，补丁文件通常是 diff 程序创建的。
+Sed 软件包包含一个流编辑器。
+Tar 软件包提供创建 tar 归档文件，以及对归档文件进行其他操作的功能。Tar 可以对已经创建的归档文件进行提取文件，存储新文件，更新文件，或者列出文件等操作。
+Xz 软件包包含文件压缩和解压缩工具，它能够处理 lzma 和新的 xz 压缩文件格式。使用 xz 压缩文本文件，可以得到比传统的 gzip 或 bzip2 更好的压缩比。
+Gettext 软件包包含国际化和本地化工具，它们允许程序在编译时加入 NLS (本地语言支持) 功能，使它们能够以用户的本地语言输出消息。
+Bison 软件包包含语法分析器生成器。
+Perl 软件包包含实用报表提取语言。
+Python 3 软件包包含 Python 开发环境。它被用于面向对象编程，编写脚本，为大型程序建立原型，或者开发完整的应用。
+Texinfo 软件包包含阅读、编写和转换 info 页面的程序。
+Man-pages 软件包包含 2,200 多个 man 页面。
+Tcl 软件包包含工具命令语言，它是一个可靠的通用脚本语言。Except 软件包是用 Tcl 语言编写的.
+Expect 软件包包含通过脚本控制的对话，自动化 telnet，ftp，passwd，fsck，rlogin，以及 tip 等交互应用的工具。Expect 对于测试这类程序也很有用，它简化了这类通过其他方式很难完成的工作。DejaGnu 框架是使用 Expect 编写的。
+DejaGnu 包含使用 GNU 工具运行测试套件的框架。它是用 expect 编写的，后者又使用 Tcl (工具命令语言)。
+Iana-Etc 软件包包含网络服务和协议的数据。
+Zlib 软件包包含一些程序使用的压缩和解压缩子程序。
+Bzip2 软件包包含用于压缩和解压缩文件的程序。使用 bzip2 压缩文本文件可以获得比传统的 gzip 优秀许多的压缩比。
+Zstandard 是一种实时压缩算法，提供了较高的压缩比。它具有很宽的压缩比/速度权衡范围，同时支持具有非常快速的解压缩。
+Readline 软件包包含一些提供命令行编辑和历史记录功能的库。
+Bc 软件包包含一个任意精度数值处理语言。
+Flex 软件包包含一个工具，用于生成在文本中识别模式的程序。
+GMP 软件包包含提供任意精度算术函数的数学库。
+MPFR 软件包包含多精度数学函数。
+MPC 软件包包含一个任意高精度，且舍入正确的复数算术库。
+Attr 软件包包含管理文件系统对象扩展属性的工具。
+Acl 软件包包含管理访问控制列表的工具，访问控制列表能够更细致地自由定义文件和目录的访问权限。
+Libcap 软件包为 Linux 内核提供的 POSIX 1003.1e 权能字实现用户接口。这些权能字是 root 用户的最高特权分割成的一组不同权限。
+Shadow 软件包包含安全地处理密码的程序。
+pkg-config 软件包提供一个在软件包安装的配置和编译阶段，向构建工具传递头文件和/或库文件路径的工具。
+Psmisc 软件包包含显示正在运行的进程信息的程序。
+Libtool 软件包包含 GNU 通用库支持脚本。它在一个一致、可移植的接口下隐藏了使用共享库的复杂性。
+GDBM 软件包包含 GNU 数据库管理器。它是一个使用可扩展散列的数据库函数库，工作方法和标准 UNIX dbm 类似。该库提供用于存储键值对、通过键搜索和获取数据，以及删除键和对应数据的原语。
+Gperf 根据一组键值，生成完美散列函数。
+Expat 软件包包含用于解析 XML 文件的面向流的 C 语言库。
+Inetutils 软件包包含基本网络程序。
+XML::Parser 模块是 James Clark 的 XML 解析器 Expat 的 Perl 接口。
+Intltool 是一个从源代码文件中提取可翻译字符串的国际化工具。
+Autoconf 软件包包含生成能自动配置软件包的 shell 脚本的程序。
+Automake 软件包包含自动生成 Makefile，以便和 Autoconf 一同使用的程序。
+Kmod 软件包包含用于加载内核模块的库和工具。
+Libelf 是一个处理 ELF (可执行和可链接格式) 文件的库。
+Libffi 库提供一个可移植的高级编程接口，用于处理不同调用惯例。这允许程序在运行时调用任何给定了调用接口的函数。
+OpenSSL 软件包包含密码学相关的管理工具和库。它们被用于向其他软件包提供密码学功能，例如 OpenSSH，电子邮件程序和 Web 浏览器 (以访问 HTTPS 站点)。
+Ninja 是一个注重速度的小型构建系统。
+Meson 是一个开放源代码构建系统，它的设计保证了非常快的执行速度，和尽可能高的用户友好性。
+Check 是一个 C 语言单元测试框架。
+Groff 软件包包含处理和格式化文本的程序。
+GRUB 软件包包含 “大统一” (GRand Unified) 启动引导器。
+Less 软件包包含一个文本文件查看器。
+IPRoute2 软件包包含基于 IPv4 的基本和高级网络程序。
+Kbd 软件包包含按键表文件、控制台字体和键盘工具。
+Libpipeline 软件包包含用于灵活、方便地处理子进程流水线的库。
+Man-DB 软件包包含查找和阅读 man 页面的程序。
+Texinfo 软件包包含阅读、编写和转换 info 页面的程序。
+Vim 软件包包含强大的文本编辑器。
+Eudev 软件包包含动态创建设备节点的程序。
+Procps-ng 软件包包含监视进程的程序。
+Util-linux 软件包包含若干工具程序。这些程序中有处理文件系统、终端、分区和消息的工具。
+E2fsprogs 软件包包含处理 ext2 文件系统的工具。此外它也支持 ext3 和 ext4 日志文件系统。
+Sysklogd 软件包包含记录系统消息的程序，例如在意外情况发生时内核给出的消息。
+Sysvinit 软件包包含控制系统启动、运行和关闭的程序。
+
+
+
+
+
+https://fosspost.org/what-are-the-components-of-a-linux-distribution/
+系统组成
+Linux内核
+GNU工具
+Gnome/KDE桌面环境
+Firefox浏览器
+X显示服务
+DM 桌面管理程序
+systemd 守护进程 (取代sysvinit)

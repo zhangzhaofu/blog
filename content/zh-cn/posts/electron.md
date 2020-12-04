@@ -75,3 +75,22 @@ electron-builder
 
 
 http://www.conardli.top/blog/article/%E5%A4%9A%E7%AB%AF%E5%BC%80%E5%8F%91/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E6%80%BB%E7%BB%93%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BA%94%E7%94%A8%E7%AF%87.html#_4-7-%E8%8E%B7%E5%8F%96%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A4%A7%E5%B0%8F
+
+
+
+
+
+
+
+安装最新版
+npm install electron@latest
+
+版本
+Electron v11.0.3
+    Chromium    v87.0.4280.67
+    Node        v12.18.3
+    v8          v8.7.220.25-electron.0
+
+npm和npx区别
+npm是一个node package安装工具。
+npx的作用是先检查本地有没有安装某个package，如果没有去远程registry找，找到的话直接使用，不用下载到本地node-modules包里面，这样就能优化本地项目的大小，也可以避免安装package到全局。
