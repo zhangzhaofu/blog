@@ -1,8 +1,5 @@
 # 桌面软件开发技术
 
-windows
-https://blog.csdn.net/wenzhou1219/article/details/81227476
-
 ## 桌面操作系统
 Windows
     xp, win7, win10
@@ -16,86 +13,99 @@ Linux发行版
     其他
 
 ## 开发方式
-平台原生技术
-    Windows - VB, MFC, WPF
-    MacOS   - cocoa
-    Linux   - gtk+(gnome), qt(kde)
+使用原生接口开发
+使用web技术开发
 
-## web桌面端技术
+
+## Windows下开发技术
+在windows下开发技术的变化主要分为两部分，以.Net技术为分水岭，分为.Net出现之前及.Net出现之后
+
+### .Net出现之前
+编写 Windows 上可以运行的程序就要直接和系统API交互,或者封装好的框架。主要技术是Win32核心编程，MFC编程。主要的开发语言是C/C++
+
+### .Net出现之后
+.NET 框架是由微软开发的软件开发平台，其最主要的两个组成部分是公共语言运行时 (CLR) 和框架类库 (FCL)， 开发语言主要为C#
+
+#### 2002年 - .NET1.0
+2002 年微软推出了 .NET Framework 1.0，相应地 Visual Studio 也升级到 7，称为 Visual Studio 2002 上一个版本叫做 Visual Studio 6）
+该框架包括 C# 和 VB.NET（ Visual Basic 的继任者）
+同时，第一个版本的 ASP.NET 也在 .NET Framework 1.0 亮相，它作为网站的解决方案，一直是 .NET 框架最重要的产品线之一。
+
+#### 2005年 - .NET2.0
+Visual Studio 也升级到 Visual Studio 2005
+ASP.NET         - web框架
+Windows Form    - Windows桌面框架
+ADO.NET         - 数据库框架
+
+#### 2007年 - .NET3.0
+NET 3.0 是 .NET 框架最重大的一个更新，包括三大产品线：
+    WCF：统一了过去 Web 服务混乱的形式，形成了一个统一的格式。
+    WPF：作为前端用户界面的解决方案
+    WF：提供工作流的管理。
+.NET 3.0 标志着 Windows 平台开始全面转向 .NET 时代（以后所有版本的 Windows 都预装 .NET）。而在这之前，只有服务器版本的 Windows 会预装 .NET。
+
+#### 2008年 - .NET3.5
+Visual Studio 也升级到了 Visual Studio 2008。
+
+#### 2010年 - .NET4.0
+Visual Studio 也升级到了 Visual Studio 2010。
+
+#### 2012年 - .NET4.5
+Visual Studio 也升级到了 Visual Studio 2012。
+
+#### 后续
+在这之后，.NET 还有更高的版本 4.6 和 4.7，对应 Visual Studio 2015 和 Visual Studio 2017。
+
+#### 2016年 - .NET Core
+.NET Core 是 .NET Framework 的新一代版本，也是另外一种实现方式，是微软开发的第一个跨平台的（Windows、Mac OSX、Linux）、开源的、模块化的应用程序开发框架。
+.NET Core 的应用层包括 UWP，用于开发 Windows 商店应用（部署到任何支持 Win10 的设备上，例如 XBox，智能手机甚至眼镜），和 ASP.NET Core，用于开发网站应用（通常展现为微服务的形式）
+
+## macOS的开发
+主要使用Cocoa框架来开发
+Cocoa
+    Foundation框架 (Foundation框架包含所有和界面显示无关的类。)
+    Application Kit（AppKit）框架 (Application Kit 框架包含实现图形的、事件驱动的用户界面需要的所有对象)
+	
+## Linux下的开发
+Linux下主要分为两大桌面环境，Gnome和KDE
+Gnome桌面环境使用的是gtk+
+KDE桌面环境使用的是Qt
+
+## 其他类库
+C/C++
+    GTK+
+    Qt
+    wxWidgets
+    duilib (Windows)
+    Delphi (Windows)
+
+Java
+    Swing/AWT
+
+C#
+    .NET Core
+
+Python
+    Tkinter
+    PyGTK
+    PyQt/PySide
+    wxPython
+    Kivy
+
+## web技术
+CEF
 NW.js
 Electron
-CEF
 
-MFC
-duilib
+### CEF
+用chromium&webkit来呈现web页面，客户端里面嵌入浏览器，浏览器显示网页
 
-Qt
-    Linux下的KDE桌面环境
-    VirtualBox虚拟机
-    Opera浏览器
-    VLC播放器
-    WPS Office
-    YY语音
-    
+### NW.js
+基于Chromium和node.js, 利用web方式开发跨平台桌面应用
 
-Swing/AWT
-JavaFx
+### Electron
+也是基于Chromium和node.js，和NW.js不同的是它更像是node.js程序
 
-WPF
-
-electron
-    VSCode
-    Atom
-    Wordpress
-    Skype
-
-
-
-
-
-
-
-windows
-    win32 API
-    MFC
-    com/atl/wtl
-
-
-VB
-
-VC (Win32/MFC/COM)
-
-WinForm、WPF或Xamarin
-使用C#开发，WinForm和WPF局限于Windows平台。
-
-Duilib
-Duilib是在Windows平台上使用最广泛的类库，使用C++和XML混合编程
-适合于界面比较简单的软件，视觉特效丰富，局限于Windows的平台
-
-Gtk、Qt或WxWidget
-三种基本可以做到跨平台的技术，使用C/C++开发，使用者广泛。其中WxWidget使用了API嫁接方式，Qt和Gtk（包括各种绑定技术）使用自绘技术。
-
-Atk、Swing或JavaFX
-使用Java语言开发软件，有JDK加持业界积累的众多Java类库支持
-
-
-
-
-原生开发Native
-VB/VC/Delphi
-Qt
-
-混搭开发Hybrid
-NW.js (基于 Chromium（Chrome 开源版本） + Node.js)
-Electron
-    它允许使用 Node.js（作为后端）和 Chromium（作为前端）来完成桌面 GUI 应用程序的开发。Chromium 提供了渲染页面和响应用户交互的能力，而 Node.js 提供了访问本地文件系统和网络的能力，也可以使用 NPM 上的几十万个第三方包。在此基础之上，Electron 还提供了 Mac、Windows、Linux 三个平台上的一些原生 API，例如全局快捷键、文件选择框、托盘图标和通知、剪贴板、菜单栏等。
-
-
-
-
-Windows
-    VB
-    VC,MFC
-    Winform
-    WPF
-    UWP
+Chromium   - 可以在不考虑兼容性的情况下利用强大的web生态来开发界面
+Node.js    - 提供了底层能力，比如文件读写及集成C/C++等，还可以使用npm包
+Native API - 提供了跨平台和原生能力，提供了窗口、托盘、系统通知、软件更新
