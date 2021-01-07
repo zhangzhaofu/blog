@@ -6,49 +6,73 @@ tags = ["linux"]
 categories = ["linux"]
 +++
 
-## Linux From Scratch
+## Linux
 
-使用磁盘分区程序(cfdisk或fdisk), 创建新分区
+开放源代码的，可以自由传播的类Unix操作系统软件
 
-如果 启动磁盘 采用 GUID 分区表 (GPT)，那么必须创建一个小的，一般占据 1MB 的分区
-这个分区在 fdisk 下显示为 'BIOS Boot' 分区
+计算机
+    硬件 (CPU、主板、内存、硬盘、键盘、鼠标、显示器等)
+    软件 (操作系统、应用软件等)
 
-现在我们建立好了空白分区，可以在分区上建立文件系统。LFS 可以使用 Linux 内核能够识别的任何文件系统，最常见的是 ext3 和 ext4
+操作系统
+    文件系统
+    设备驱动程序
+    用户接口
+    系统服务程序
 
-LFS 假设根文件系统 (/) 采用 ext4 文件系统。输入以下命令在 LFS 分区创建一个 ext4 文件系统：
-```
-mkfs -v -t ext4 /dev/<xxx>
-```
+服务器和PC端
+    Linux/Unix
+    Windows
+    macOS
 
-如果您拥有一个现成的 swap分区，就不需要格式化它。如果新创建了一个 swap分区，需要执行以下命令以初始化它：
-```
-mkswap /dev/<yyy>
-```
+手机端
+    Android
+    iOS
+    Windows Phone (WP)
 
-我们已经在分区上建立了文件系统，为了访问分区，我们需要把分区挂载到选定的挂载点上
-```
-mount -v -t ext4 /dev/<xxx> $LFS
-```
-上面的命令假设您在构建 LFS 的过程中不会重启计算机。如果您关闭了系统，那么您要么在继续构建过程时重新挂载分区，要么修改宿主系统的 /etc/fstab 文件，使得系统在引导时自动挂载它们。例如：
-```
-/dev/<xxx>  /mnt/lfs ext4   defaults      1     1
-```
-如果您使用了 swap 分区，使用 swapon 命令启用它：
-```
-/sbin/swapon -v /dev/<zzz>
-```
+嵌入式
+    Windows CE
+    Linux
+    ...
 
-下面为该目录添加写入权限和 sticky 标志。“Sticky” 标志使得即使有多个用户对该目录有写入权限，也只有文件所有者能够删除其中的文件。输入以下命令，启用写入权限和 sticky 标志：
-```
-chmod -v a+wt $LFS/sources
-```
+## 历史
+Unix诞生于20世纪60年代末
+Windows诞生于20世纪80年代中期
+Linux诞生于20世纪90年代初
 
-wget获取wget-list里的软件包
-```
-wget --input-file=wget-list --continue --directory-prefix=$LFS/sources
-```
+Unix - 由肯•汤普森（Ken Thompson）和丹尼斯•里奇（Dennis Ritchie）发明
 
-用到的软件:
+批处理操作系统
+分时操作系统
+
+Multics 工程计划目标是开发一种交互式的、具有多道程序处理能力的分时操作系统，以取代当时广泛使用的批处理操作系统。
+想一下英文中的前缀 Multi 和 Uni，就明白了 UNIX 的隐意。Multi 是大的意思，大而且繁；而 Uni 是小的意思，小而且巧。这是 UNIX 开发者的设计初衷，这个理念一直影响至今。
+
+1971-1972 年，肯•汤普森的同事丹尼斯•里奇发明了传说中的C语言，这是一种适合编写系统软件的高级语言
+到了 1973 年，UNIX 系统的绝大部分源代码都用C语言进行了重写
+
+20 世纪 70 年代初，计算机界还有一项伟大的发明——TCP/IP 协议
+
+这为 UNIX 系统、C语言、TCP/IP 协议的发展拉开了序幕，它们分别在操作系统、编程语言、网络协议这三个领域影响至今
+
+FreeBSD 源于美国加利福尼亚大学伯克利分校开发的 UNIX 版本
+苹果公司的 OS  X 就是基于 FreeBSD 的操作系统
+
+Linux 内核最初是由李纳斯•托瓦兹（Linus Torvalds）在赫尔辛基大学读书时出于个人爱好而编写的，当时他觉得教学用的迷你版 UNIX 操作系统 Minix 太难用了，于是决定自己开发一个操作系统。第 1 版本于 1991 年 9 月发布，当时仅有 10 000 行代码。
+
+类Unix操作系统
+    传统的Unix操作系统: FreeBSD, OpenBSD, NetBSD, Solaris, ...
+    相似的系统: Linux, QNX, Minix
+
+脚本:
+Shell, awk, sed, Perl, TCL, Python, Ruby
+
+Richard Stallman，理查德·马修·斯托曼，自由软件运动的领袖、GNU 计划的创立者。
+1984 年, 发起了 GNU 源代码开放计划并制定了著名的 GPL 许可协议。
+
+
+
+## 组成
 Binutils 包含汇编器、链接器以及其他用于处理目标文件的工具。
 GCC 软件包包含 GNU 编译器集合，其中有 C 和 C++ 编译器。
 Linux API 头文件 (在 linux-5.8.3.tar.xz 中) 导出内核 API 供 Glibc 使用。
@@ -125,17 +149,3 @@ Util-linux 软件包包含若干工具程序。这些程序中有处理文件系
 E2fsprogs 软件包包含处理 ext2 文件系统的工具。此外它也支持 ext3 和 ext4 日志文件系统。
 Sysklogd 软件包包含记录系统消息的程序，例如在意外情况发生时内核给出的消息。
 Sysvinit 软件包包含控制系统启动、运行和关闭的程序。
-
-
-
-
-
-https://fosspost.org/what-are-the-components-of-a-linux-distribution/
-系统组成
-Linux内核
-GNU工具
-Gnome/KDE桌面环境
-Firefox浏览器
-X显示服务
-DM 桌面管理程序
-systemd 守护进程 (取代sysvinit)

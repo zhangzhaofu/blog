@@ -6,6 +6,9 @@ tags = ["qt", "cs"]
 categories = ["blog"]
 +++
 
+## qt
+https://qmlbook.github.io/
+
 ## qt qml debug
 ```
 export QT_MESSAGE_PATTERN="[%{type}] %{appname} (%{file}:%{line}) - %{message}"
@@ -30,3 +33,16 @@ https://gitee.com/feiyangqingyun/qtkaifajingyan
 
 ## web
 https://juejin.cn/post/6844903906053455879
+
+
+## qt6
+
+python3 -m venv env
+source env/bin/activate
+pip install pyside6
+
+```
+import PySide6
+
+print(PySide6.__version__)
+```

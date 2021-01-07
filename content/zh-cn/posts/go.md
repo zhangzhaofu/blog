@@ -8,4 +8,35 @@ categories = ["go"]
 
 ## Go学习资料
 
-https://draveness.me/golang/
+[c语言编程网](http://c.biancheng.net/golang/)
+[Go语言中文网](https://books.studygolang.com/)
+[Go语言圣经](https://books.studygolang.com/gopl-zh/)
+[Go语言高级编程](https://chai2010.cn/advanced-go-programming-book/)
+[李文周的博客](https://www.liwenzhou.com/posts/Go/go_menu/)
+[Go语言101](https://gfw.go101.org/article/101.html)
+[Go语言设计与实现](https://draveness.me/golang/)
+[Go语言原本](https://golang.design/under-the-hood/zh-cn/part1basic/)
+
+## 帮助文档
+go help aSubCommand
+go doc fmt.Printf
+godoc -http=localhost:6060
+
+## 编译go源码
+```
+./src/make.bash
+```
+
+## 编译运行程序
+```
+go run .
+```
+
+## go子命令 (运行不带参数的go命令将会列出所有支持的go子命令)
+go run
+go build
+go install
+go fmt
+go test
+go doc
+go mod
