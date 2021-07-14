@@ -1,5 +1,37 @@
 # cs
 
+## 基础
+
+数据结构和算法
+计算机网络
+操作系统
+编译原理
+设计模式
+
+### 书籍
+- 大话数据结构 
+- 算法 
+- 剑指offer 
+- LeetCode刷题
+
+- TCP/IP详解
+
+- 深入理解计算机系统
+
+- 大话设计模式
+- 设计模式之禅
+
+
+## 学习顺序
+- Linux操作系统的使用
+鸟哥的Linux私房菜
+
+- Linux环境编程
+Unix环境高级编程
+Linux高性能服务器编程
+POSIX多线程程序设计
+
+
 https://www.kancloud.cn/luofei614/programmer_talk_life/137939
 
 
