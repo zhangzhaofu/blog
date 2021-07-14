@@ -1,7 +1,7 @@
 +++ 
 date = "2020-11-01"
 title = "车险"
-slug = "car_ insurance" 
+slug = "car_insurance" 
 tags = ["car", "life"]
 categories = ["blog"]
 +++

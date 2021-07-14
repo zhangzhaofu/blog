@@ -2,7 +2,7 @@
 date = "2020-11-12"
 title = "book"
 slug = "book" 
-tags = ["book", "cs"]
+tags = ["book", "pdf"]
 categories = ["blog"]
 +++
 
