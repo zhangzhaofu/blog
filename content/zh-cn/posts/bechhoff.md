@@ -1,12 +1,12 @@
 +++ 
 date = "2021-07-14"
-title = "BechHoff"
+title = "BechHoff-倍福"
 slug = "bechhoff" 
-tags = ["bechhoff"]
-categories = ["misc"]
+tags = ["厂商", "嵌入式"]
+categories = ["blog"]
 +++
 
-## BechHoff
+## BechHoff-倍福
 
 倍福
 
