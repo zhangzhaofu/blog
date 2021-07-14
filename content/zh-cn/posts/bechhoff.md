@@ -1,12 +1,12 @@
 +++ 
 date = "2021-07-14"
-title = "misc"
+title = "BechHoff"
 slug = "bechhoff" 
 tags = ["bechhoff"]
 categories = ["misc"]
 +++
 
-## bechhoff
+## BechHoff
 
 倍福
 
