@@ -1,3 +1,11 @@
++++ 
+date = "2020-10-30"
+title = "web学习"
+slug = "web" 
+tags = ["web", "cs", "study"]
+categories = ["blog"]
++++
+
 # web技术
 
 https://www.runoob.com/w3cnote/web-10-years.html
@@ -8,8 +16,6 @@ https://iclient.supermap.io/dev/web/books/modern-web-gis-in-action/
 
 ## web安全
 https://websec.readthedocs.io/zh/latest/basic/history.html
-
-
 
 
 学习路线

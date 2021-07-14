@@ -1,3 +1,11 @@
++++ 
+date = "2020-11-10"
+title = "编程随想"
+slug = "program_think" 
+tags = ["blog"]
+categories = ["blog"]
++++
+
 # 编程随想
 
 ## 由编程随想的博客看到的其他网站

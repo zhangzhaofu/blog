@@ -1,10 +1,12 @@
 +++ 
 date = "2020-11-12"
-title = "macOS"
+title = "macOS学习"
 slug = "macos" 
 tags = ["macos", "cs"]
 categories = ["blog"]
 +++
+
+# macOS学习
 
 ## 学习推荐
 https://www.cnblogs.com/gaozhang12345/p/10818557.html

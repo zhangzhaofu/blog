@@ -2,7 +2,7 @@
 date = "2020-11-10"
 title = "nmap"
 slug = "nmap" 
-tags = ["nmap", "cs"]
+tags = ["nmap", "tools", "cs"]
 categories = ["blog"]
 +++
 

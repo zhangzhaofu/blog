@@ -2,11 +2,11 @@
 date = "2020-10-26"
 title = "Linux学习"
 slug = "linux" 
-tags = ["linux"]
-categories = ["linux"]
+tags = ["linux", "cs"]
+categories = ["blog"]
 +++
 
-## Linux
+## Linux学习
 
 开放源代码的，可以自由传播的类Unix操作系统软件
 

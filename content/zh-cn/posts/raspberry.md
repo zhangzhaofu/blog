@@ -2,8 +2,8 @@
 date = "2020-10-28"
 title = "Raspberry"
 slug = "raspberry" 
-tags = ["linux", "raspberry"]
-categories = ["raspberry"]
+tags = ["raspberry", "emb", "cs"]
+categories = ["blog"]
 +++
 
 ## 初始设置

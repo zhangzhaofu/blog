@@ -2,8 +2,8 @@
 date = "2020-11-12"
 title = "学习"
 slug = "study" 
-tags = ["study"]
-categories = ["linux"]
+tags = ["links", "cs"]
+categories = ["blog"]
 +++
 
 ## boobooke.com (播布客)

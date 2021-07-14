@@ -2,7 +2,7 @@
 date = "2020-11-04"
 title = "图灵"
 slug = "ituring" 
-tags = ["ituring", "CS"]
+tags = ["ituring", "book", "cs"]
 categories = ["blog"]
 +++
 

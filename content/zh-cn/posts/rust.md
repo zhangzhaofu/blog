@@ -2,7 +2,7 @@
 date = "2020-11-06"
 title = "Rust"
 slug = "rust" 
-tags = ["rust", "cs"]
+tags = ["rust", "lang", "cs"]
 categories = ["blog"]
 +++
 

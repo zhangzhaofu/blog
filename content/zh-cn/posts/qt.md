@@ -2,11 +2,11 @@
 date = "2020-11-11"
 title = "qt"
 slug = "qt" 
-tags = ["qt", "cs"]
+tags = ["qt", "c++", "cs"]
 categories = ["blog"]
 +++
 
-## qt
+# qt
 https://qmlbook.github.io/
 
 ## qt qml debug

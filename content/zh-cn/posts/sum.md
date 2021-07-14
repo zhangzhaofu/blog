@@ -2,9 +2,12 @@
 date = "2020-11-06"
 title = "sum校验"
 slug = "sum" 
-tags = ["sum", "cs"]
+tags = ["sum", "tools", "cs"]
 categories = ["blog"]
 +++
+
+
+# sum校验
 
 ## 文件校验
 网上下载很多文件，都会提供md5或者SHA256校验，防止文件内容被篡改，文件下载到本地后，我们可以对文件进行校验。

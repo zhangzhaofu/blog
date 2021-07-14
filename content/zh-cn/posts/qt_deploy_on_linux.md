@@ -2,9 +2,11 @@
 date = "2020-11-06"
 title = "qt deploy on linux"
 slug = "qt_deploy_on_linux" 
-tags = ["qt", "cs"]
+tags = ["qt", "c++", "cs"]
 categories = ["blog"]
 +++
+
+# qt deploy on linux
 
 # ls
 ```

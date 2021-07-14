@@ -2,8 +2,8 @@
 date = "2020-10-23"
 title = "pyinstaller使用"
 slug = "pyinstaller" 
-tags = ["python", "qt"]
-categories = ["python"]
+tags = ["pyinstaller", "python", "cs"]
+categories = ["blog"]
 +++
 
 ## pyinstaller部署pyqt5开发的程序demo

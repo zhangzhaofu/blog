@@ -2,8 +2,8 @@
 date = "2020-10-29"
 title = "JavaScript教程"
 slug = "javascript" 
-tags = ["javascript", "web"]
-categories = ["javascript"]
+tags = ["javascript", "web", "cs"]
+categories = ["blog"]
 +++
 
 ## 数据类型
