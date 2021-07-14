@@ -2,7 +2,7 @@
 date = "2020-10-26"
 title = "黑客"
 slug = "hacker" 
-tags = ["hacker", "cs"]
+tags = ["hacker", "safe", "cs"]
 categories = ["blog"]
 +++
 

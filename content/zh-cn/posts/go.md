@@ -2,7 +2,7 @@
 date = "2020-10-26"
 title = "Go学习"
 slug = "go" 
-tags = ["go", "cs"]
+tags = ["go", "lang", "cs"]
 categories = ["blog"]
 +++
 

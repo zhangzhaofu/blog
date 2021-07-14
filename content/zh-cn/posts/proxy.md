@@ -2,7 +2,7 @@
 date = "2020-11-06"
 title = "命令行代理"
 slug = "proxy" 
-tags = ["proxy", "tools"]
+tags = ["proxy", "tool", "cs"]
 categories = ["blog"]
 +++
 

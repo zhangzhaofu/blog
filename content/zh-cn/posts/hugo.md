@@ -2,7 +2,7 @@
 date = "2020-10-22"
 title = "Hugo教程"
 slug = "hugo" 
-tags = ["hugo", "blog"]
+tags = ["hugo", "blog", "cs"]
 categories = ["blog"]
 +++
 

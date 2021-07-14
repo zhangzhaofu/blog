@@ -2,7 +2,7 @@
 date = "2020-10-26"
 title = "Linux学习"
 slug = "linux" 
-tags = ["linux", "cs"]
+tags = ["linux", "os", "cs"]
 categories = ["blog"]
 +++
 

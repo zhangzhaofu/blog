@@ -1,3 +1,11 @@
++++ 
+date = "2020-11-01"
+title = "C语言"
+slug = "c" 
+tags = ["c", "lang", "cs"]
+categories = ["blog"]
++++
+
 # C
 
 https://akaedu.github.io/book/

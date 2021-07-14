@@ -2,7 +2,7 @@
 date = "2021-07-14"
 title = "BechHoff-倍福"
 slug = "bechhoff" 
-tags = ["厂商", "嵌入式"]
+tags = ["bechhoff", "emb", "cs"]
 categories = ["blog"]
 +++
 

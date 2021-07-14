@@ -2,7 +2,7 @@
 date = "2020-11-04"
 title = "教育"
 slug = "teacher" 
-tags = ["teacher", "links"]
+tags = ["link", "study"]
 categories = ["blog"]
 +++
 

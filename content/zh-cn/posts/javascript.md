@@ -2,7 +2,7 @@
 date = "2020-10-29"
 title = "JavaScript教程"
 slug = "javascript" 
-tags = ["javascript", "web", "cs"]
+tags = ["javascript", "lang", "cs"]
 categories = ["blog"]
 +++
 

@@ -2,7 +2,7 @@
 date = "2020-11-10"
 title = "编程随想"
 slug = "program_think" 
-tags = ["blog"]
+tags = ["blog", "link", "study"]
 categories = ["blog"]
 +++
 

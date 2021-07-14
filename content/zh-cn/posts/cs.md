@@ -1,3 +1,11 @@
++++ 
+date = "2020-11-01"
+title = "计算机"
+slug = "cs" 
+tags = ["cs"]
+categories = ["blog"]
++++
+
 # cs
 
 ## 基础

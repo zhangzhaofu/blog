@@ -1,3 +1,11 @@
++++ 
+date = "2020-11-01"
+title = "桌面软件开发技术"
+slug = "desktop" 
+tags = ["gui", "cs"]
+categories = ["blog"]
++++
+
 # 桌面软件开发技术
 
 ## 桌面操作系统

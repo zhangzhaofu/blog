@@ -2,7 +2,7 @@
 date = "2020-11-12"
 title = "macOS学习"
 slug = "macos" 
-tags = ["macos", "cs"]
+tags = ["macos", "os", "cs"]
 categories = ["blog"]
 +++
 
@@ -131,3 +131,9 @@ clang -fobjc-arc -framework Foundation main.m
 过程化编程注重数据和功能之间的交互
 面向对象编程注重对象的设计及对象间的交互
 
+https://zhi-ming-zhang.gitbooks.io/macos/content/
+https://www.jianshu.com/p/c79ff411e983
+
+Cocoa
+    Foundation框架 (Foundation框架包含所有和界面显示无关的类。)
+    Application Kit（AppKit）框架 (Application Kit 框架包含实现图形的、事件驱动的用户界面需要的所有对象)

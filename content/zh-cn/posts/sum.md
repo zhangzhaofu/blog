@@ -2,7 +2,7 @@
 date = "2020-11-06"
 title = "sum校验"
 slug = "sum" 
-tags = ["sum", "tools", "cs"]
+tags = ["tool", "cs"]
 categories = ["blog"]
 +++
 

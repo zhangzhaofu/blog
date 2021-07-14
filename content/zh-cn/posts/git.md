@@ -2,7 +2,7 @@
 date = "2021-07-14"
 title = "git"
 slug = "git" 
-tags = ["git"]
+tags = ["git", "tool", "cs"]
 categories = ["tools"]
 +++
 

@@ -2,7 +2,7 @@
 date = "2021-07-14"
 title = "ROS"
 slug = "ros" 
-tags = ["ros", "robot", "emb", "cs"]
+tags = ["ros", "emb", "cs"]
 categories = ["blog"]
 +++
 
