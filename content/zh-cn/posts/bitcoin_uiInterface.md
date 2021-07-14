@@ -2,7 +2,7 @@
 date = "2020-11-06"
 title = "Bitcoin"
 slug = "bitcoin_uiInterface" 
-tags = ["bitcoin", "cs"]
+tags = ["bitcoin", "blockchain", "cs"]
 categories = ["blog"]
 +++
 
