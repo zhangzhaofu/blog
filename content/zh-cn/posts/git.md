@@ -53,3 +53,9 @@ git checkout master
 git merge local
 git push
 ```
+
+## git全局忽略.DS_Store文件
+```
+git config --global core.excludesfile /Users/zhangzf/.gitignore_global
+echo ".DS_Store" >> ~/.gitignore_global
+```
