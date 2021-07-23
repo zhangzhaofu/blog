@@ -51,3 +51,9 @@ catkin_make
 ```
 source ~/catkin_ws/devel/setup.bash
 ```
+
+### ros launch文件
+```
+respawn =“true” （可选）
+如果节点退出，则自动重新启动节点。
+```
