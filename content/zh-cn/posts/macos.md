@@ -137,3 +137,33 @@ https://www.jianshu.com/p/c79ff411e983
 Cocoa
     Foundation框架 (Foundation框架包含所有和界面显示无关的类。)
     Application Kit（AppKit）框架 (Application Kit 框架包含实现图形的、事件驱动的用户界面需要的所有对象)
+
+
+
+
+# Mac 下 brew 切换为国内源
+
+## 查看 homebrew-core.git 当前源
+```
+cd "$(brew --repo homebrew/core)" && git remote -v 
+```
+
+## 修改 brew.git 为阿里源
+```
+$ git -C "$(brew --repo)" remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git
+```
+
+## 修改 homebrew-core.git 为阿里源
+```
+$ git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
+```
+
+## zsh 替换 brew bintray 镜像
+```
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' >> ~/.zshrc
+source ~/.zshrc
+```
+## 刷新源
+```
+brew update
+```

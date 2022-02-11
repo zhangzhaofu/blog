@@ -8,6 +8,46 @@ categories = ["tools"]
 
 ## git
 
+## 邮箱，名字
+```
+git config --global user.email "zhang_zhao_fu@sina.com"
+git config --global user.name "zhangzhaofu"
+```
+
+## 默认编辑器
+```
+git config --global core.editor vim
+```
+
+## 保存密码
+```
+vi ~/.gitconf
+[credential]
+    helper = store
+```
+
+## 获取vps中git仓库
+```
+git clone git@zhangzhaofu.com:Note.git
+```
+
+## git获取自己搭建的git服务器
+```
+git clone git@108.160.130.72:~/Note.git
+```
+
+## 取消所有更改
+```
+git checkout . && git clean -xdf
+git submodule foreach 'git checkout . && git clean -fxd'
+```
+
+## 有时tag更新不了最新
+```
+git tag | xargs git tag -d
+git fetch --tag
+```
+
 
 ### git log 更改时区
 ```
@@ -59,3 +99,15 @@ git push
 git config --global core.excludesfile /Users/zhangzf/.gitignore_global
 echo ".DS_Store" >> ~/.gitignore_global
 ```
+
+## git server authorized_keys
+```
+sudo adduser git
+su git
+cd
+mkdir .ssh && chmod 700 .ssh
+touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
+```
+
+
+

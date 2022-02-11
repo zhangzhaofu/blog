@@ -69,3 +69,9 @@ sudo docker login
 ```
 sudo docker push doubledog/hoba-desktop:init
 ```
+
+## 清理
+```
+docker system df
+docker system prune -a
+```
